@@ -13,3 +13,9 @@ AWS EKS Implementation and tutorial
 
 ## tools
 All tools installation such as kubectl, eksctl, aws-cli, etc. can be found in the tools folder.
+
+
+### Resources:
+https://courses.datacumulus.com/amazon-eks-starter-8ur
+
+
