@@ -1,6 +1,12 @@
 
 # kubectl - the commandline K8s tool
 
+### kubectl execution process
+* kubectl config file
+    * EKS endpoint
+        * User authentication using aws-iam_authenticator
+            * aws-iam_authenticator generates a token based on aws credentials file
+
 ### install _kubectl_ & _aws-iam_authenticator_
 * kubectl
   * on RH based Linux: ```sudo dnf install kubernetes-client```
