@@ -57,14 +57,16 @@ where the last 2 policies are the ones you created above
 * click _Next: Review_
 * enter a *unique* Role name, _EKS-course-role_ and click *_Create Role_*
 
-### create keypair
+### create keypair - pem file
 
 * open EC2 dashboard ```https://console.aws.amazon.com/ec2```
 * click _KeyPairs_ in left navigation bar under section "Network&Security"
 * click _Create Key Pair_
 * provide name for keypair, _eks-course_ and click *_Create_*
 * !! the keypair will be downloaded immediately => file *eks-course.pem* !!
+* pem file should be moved to /c/Users/{user_name}/.ssh or /Users/$USERNAME/.ssh
 
 ### create API Access key/-secret
 * create key+secret via AWS console
   AWS-console => IAM => Users => <your user> => tab *Security credentials* => button *Create access key*
+* create a credentials file in /c/Users/{user_name}/.aws or /Users/$USERNAME/.aws, see config-files/credentials for sample and put in access key. 
