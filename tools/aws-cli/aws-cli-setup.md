@@ -19,9 +19,13 @@
 ## Install AWS CLI:
 1. https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html
 
-$pip3 install awscli --user
+```sh
+$ pip3 install awscli --user
+```
 
 // figure out aws path, see docs above and add folder to path
 
 // check
-$aws --version
+```sh
+$ aws --version
+```
