@@ -1,11 +1,11 @@
 # AWS CLI
 
 ## Summary
-1. Switch from manual setup to scripting
-2. Infrastructure as code
-3. Built upon Python
-4. Creates K8 control plane
-5. Requires existing AWS infrastructure (VPC, SG)
+- Switch from manual setup to scripting
+- Infrastructure as code
+- Built upon Python
+- Creates K8 control plane
+- Requires existing AWS infrastructure (VPC, SG)
 
 
 ## AWS CLI Setup:
@@ -23,9 +23,10 @@
 $ pip3 install awscli --user
 ```
 
-// figure out aws path, see docs above and add folder to path
+### Note:
+Figure out aws path, see docs above and add folder to path
 
-// check
+Check installation:
 ```sh
 $ aws --version
 ```

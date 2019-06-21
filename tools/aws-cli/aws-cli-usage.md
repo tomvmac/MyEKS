@@ -8,20 +8,29 @@ https://docs.aws.amazon.com/cli/latest/index.html
 https://docs.aws.amazon.com/cli/latest/reference/eks/index.html
 
 ## Aws eks commands:
-// list eks clusters
-$aws eks list-clusters
 
-// describe cluster
-$aws eks describe-cluster --name "EKS-course-cluster"
+List eks clusters:
+```sh
+$ aws eks list-clusters
+```
 
-// create a new eks cluster
+Describe cluster:
+```sh
+$ aws eks describe-cluster --name "EKS-course-cluster"
+```
 
-// pre-requisite is to use cloudformation to create a new vpc, subnet, sec group
-Update eks-course-vpn.yaml
+Create a new eks cluster:
 
-aws eks create-cluster --name EKS-by-cli --role-arn arn:aws:iam::351073549249:role/EKS-course-role --resources-vpc-config subnetIds=subnet-01568520d0e9c3934,subnet-01568520d0e9c3934,subnet-072e08d3abcfc863c,securityGroupIds=sg-050399a6d7e502406
+### Pre-requisite:
+Use cloudformation to create a new vpc, subnet, sec group.
 
-Note that aws eks can only create the EKS control plane, but you will still need to create the work nodes separately, by cloudformation.
+```sh
+$ aws eks create-cluster --name EKS-by-cli --role-arn arn:aws:iam::351073549249:role/EKS-course-role --resources-vpc-config subnetIds=subnet-01568520d0e9c3934,subnet-01568520d0e9c3934,subnet-072e08d3abcfc863c,securityGroupIds=sg-050399a6d7e502406
+```
 
-// delete cluster
-aws eks delete-cluster --name EKS-by-cli
+`Note that aws eks can only create the EKS control plane, but you will still need to create the work nodes separately, by cloudformation.`
+
+Delete cluster:
+```sh
+$ aws eks delete-cluster --name EKS-by-cli
+```
