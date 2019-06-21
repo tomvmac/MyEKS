@@ -15,6 +15,7 @@ $aws eks list-clusters
 $aws eks describe-cluster --name "EKS-course-cluster"
 
 // create a new eks cluster
+
 // pre-requisite is to use cloudformation to create a new vpc, subnet, sec group
 Update eks-course-vpn.yaml
 
