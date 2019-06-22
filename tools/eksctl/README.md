@@ -20,15 +20,19 @@ https://docs.aws.amazon.com/eks/latest/userguide/getting-started.html
 
 ### Commands:
 
-Get clusters:
+Create eks cluster:
+EKSCTL creates two stacks in Cloudformation, one for control plane and one for worker nodes.  This is the same as manual CloudFormation template execution, except there is fully automated.
+
+Create node group specifying instance size:
+https://eksctl.io/
+
 ```sh
-$ eksctl get clusters
-$ eksctl get cluster --name EKS-course-cluster
+$ eksctl create cluster --region us-east-2 --name my-eks
 ```
 
-Create eks cluster:
+Create eks cluster with specific node instance type:
 ```sh
-$ eksctl create cluster --region us-west-2 --name eksctl-test
+$ eksctl create cluster --region us-east-2 --name my-eks --node-type=t2.small
 ```
 
 `Note that under the hood, this create cluster actually will create two cloudformation stacks, one to create the control plane and the other to create the worker nodes.`
@@ -36,12 +40,12 @@ $ eksctl create cluster --region us-west-2 --name eksctl-test
 
 Scale work nodes:
 ```sh
-$ eksctl scale nodegroup --name eksctl-test --nodes=4 --region=us-west-2
+$ eksctl scale nodegroup --name my-eks --nodes=4 --region=us-east-2
 ```
 
 Delete cluster:
 https://docs.aws.amazon.com/eks/latest/userguide/delete-cluster.html
 
 ```sh
-$ eksctl delete cluster --name eksctl-test --region=us-west-2
+$ eksctl delete cluster --name my-eks --region=us-east-2
 ```
