@@ -23,5 +23,5 @@ $ eksctl create cluster --region us-east-2 --name my-eks
 
 Create eks cluster with specific node instance type:
 ```sh
-$ eksctl create cluster --region us-east-2 --name my-eks --node-type=t2.small
+$ eksctl create cluster --region us-east-2 --name my-eks --node-type t2.small
 ```

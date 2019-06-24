@@ -32,7 +32,7 @@ $ eksctl create cluster --region us-east-2 --name my-eks
 
 Create eks cluster with specific node instance type:
 ```sh
-$ eksctl create cluster --region us-east-2 --name my-eks --node-type=t2.small
+$ eksctl create cluster --region us-east-2 --name my-eks --node-type t2.small
 ```
 
 `Note that under the hood, this create cluster actually will create two cloudformation stacks, one to create the control plane and the other to create the worker nodes.`
@@ -40,12 +40,12 @@ $ eksctl create cluster --region us-east-2 --name my-eks --node-type=t2.small
 
 Scale work nodes:
 ```sh
-$ eksctl scale nodegroup --name my-eks --nodes=4 --region=us-east-2
+$ eksctl scale nodegroup --name my-eks --nodes=4 --region us-east-2
 ```
 
 Delete cluster:
 https://docs.aws.amazon.com/eks/latest/userguide/delete-cluster.html
 
 ```sh
-$ eksctl delete cluster --name my-eks --region=us-east-2
+$ eksctl delete cluster --name my-eks --region us-east-2
 ```
